@@ -21,7 +21,7 @@ public class CurrencyExchangeController {
 			@PathVariable(name = "from") String from,
 			@PathVariable(name = "to") String to) {
 		
-		return currencyExchangeRepository.findByFromAndTo(to, from);
+		return currencyExchangeRepository.findByFromAndTo(from, to);
 	}
 	
 }

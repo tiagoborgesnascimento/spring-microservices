@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.borgestech.currencyconversionservice.bean.CurrencyConversion;
 
-@FeignClient(name = "currency-exchange-service", url = "localhost:8001/currency-exchange")
+@FeignClient(name = "currency-exchange-service")
 public interface CurrencyExchangeService {
 
-	@GetMapping("/from/{from}/to/{to}")
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversion retrieveExchangeValue(
 			@PathVariable(name = "from") String from,
 			@PathVariable(name = "to") String to);
